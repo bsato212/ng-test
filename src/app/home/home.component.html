@@ -1,0 +1,20 @@
+<p>ng version: {{ version }}</p>
+<p>id: {{ id }}</p>
+<p>tick: {{ clockService.tick }}</p>
+
+<button [id]="id" (click)="onClick()">Click Me</button>
+
+<div *ngIf="clicked > 0">
+  <p [ngClass]="{
+    'odd': isOdd(clicked),
+    'even': !isOdd(clicked)
+  }">clicked: {{ clicked }} {{ isOdd(clicked) ? "odd" : "even" }}</p>
+</div>
+
+<ul>
+  <li *ngFor="let item of myArray | async">
+    {{ item }}
+  </li>
+</ul>
+
+<input type="text" [value]="version" #myInput (keyup)="onType(myInput.value)">
