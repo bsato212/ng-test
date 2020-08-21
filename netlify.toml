@@ -1,4 +1,5 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-My-Custom-Header = "Foo Bar Baz"
+    X-My-Custom-Header = "Foo Bar Baz Qux"
+    Basic-Auth: htv:mediaos
